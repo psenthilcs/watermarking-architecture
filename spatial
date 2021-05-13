@@ -1,0 +1,312 @@
+
+
+module spat(
+	wen,
+	clk,
+	A,
+	B,
+	p,
+	radd,
+	wadd,
+	outp
+);
+
+
+input	wen;
+input	clk;
+input	[7:0] A;
+input	[7:0] B;
+input	[17:0] p;
+input	[9:0] radd;
+input	[9:0] wadd;
+output	[25:0] outp;
+
+wire	[25:0] q;
+wire	[2:0] se;
+wire	[7:0] SYNTHESIZED_WIRE_0;
+wire	[9:0] SYNTHESIZED_WIRE_1;
+wire	SYNTHESIZED_WIRE_2;
+wire	SYNTHESIZED_WIRE_3;
+wire	SYNTHESIZED_WIRE_4;
+wire	SYNTHESIZED_WIRE_5;
+wire	SYNTHESIZED_WIRE_6;
+wire	SYNTHESIZED_WIRE_7;
+wire	[7:0] SYNTHESIZED_WIRE_59;
+wire	[7:0] SYNTHESIZED_WIRE_13;
+wire	SYNTHESIZED_WIRE_17;
+wire	SYNTHESIZED_WIRE_18;
+wire	SYNTHESIZED_WIRE_60;
+wire	SYNTHESIZED_WIRE_61;
+wire	SYNTHESIZED_WIRE_62;
+wire	[7:0] SYNTHESIZED_WIRE_22;
+wire	SYNTHESIZED_WIRE_63;
+wire	SYNTHESIZED_WIRE_64;
+wire	[9:0] SYNTHESIZED_WIRE_27;
+wire	[9:0] SYNTHESIZED_WIRE_28;
+wire	[9:0] SYNTHESIZED_WIRE_29;
+wire	[9:0] SYNTHESIZED_WIRE_30;
+wire	[9:0] SYNTHESIZED_WIRE_31;
+wire	[9:0] SYNTHESIZED_WIRE_34;
+wire	[7:0] SYNTHESIZED_WIRE_43;
+wire	[7:0] SYNTHESIZED_WIRE_44;
+wire	[25:0] SYNTHESIZED_WIRE_45;
+wire	[7:0] SYNTHESIZED_WIRE_46;
+wire	[7:0] SYNTHESIZED_WIRE_48;
+wire	[7:0] SYNTHESIZED_WIRE_49;
+wire	[17:0] SYNTHESIZED_WIRE_50;
+wire	[25:0] SYNTHESIZED_WIRE_51;
+wire	[25:0] SYNTHESIZED_WIRE_52;
+wire	[7:0] SYNTHESIZED_WIRE_54;
+wire	[7:0] SYNTHESIZED_WIRE_55;
+wire	[17:0] SYNTHESIZED_WIRE_56;
+wire	[7:0] SYNTHESIZED_WIRE_57;
+wire	[7:0] SYNTHESIZED_WIRE_58;
+
+
+
+
+
+lpm_mult0	b2v_inst(
+	.dataa(SYNTHESIZED_WIRE_0),
+	.datab(SYNTHESIZED_WIRE_1),
+	.result(SYNTHESIZED_WIRE_50));
+
+assign	SYNTHESIZED_WIRE_63 = SYNTHESIZED_WIRE_2 & SYNTHESIZED_WIRE_3;
+
+
+lpm_ram_dp0	b2v_inst10(
+	.wren(wen),
+	.clock(clk),
+	.data(A),
+	.rdaddress(radd),
+	.wraddress(wadd),
+	.q(SYNTHESIZED_WIRE_43));
+
+
+lpm_ram_dp0	b2v_inst11(
+	.wren(wen),
+	.clock(clk),
+	.data(B),
+	.rdaddress(radd),
+	.wraddress(wadd),
+	.q(SYNTHESIZED_WIRE_44));
+
+assign	SYNTHESIZED_WIRE_60 = SYNTHESIZED_WIRE_4 & SYNTHESIZED_WIRE_5;
+
+assign	SYNTHESIZED_WIRE_64 = SYNTHESIZED_WIRE_6 & SYNTHESIZED_WIRE_7;
+
+
+lpm_compare1	b2v_inst15(
+	.dataa(SYNTHESIZED_WIRE_59),
+	.agb(SYNTHESIZED_WIRE_3));
+
+
+lpm_compare2	b2v_inst16(
+	.dataa(SYNTHESIZED_WIRE_59),
+	.aleb(SYNTHESIZED_WIRE_2));
+
+
+lpm_compare3	b2v_inst17(
+	.dataa(SYNTHESIZED_WIRE_59),
+	.agb(SYNTHESIZED_WIRE_5));
+
+
+lpm_compare4	b2v_inst18(
+	.dataa(SYNTHESIZED_WIRE_59),
+	.aleb(SYNTHESIZED_WIRE_4));
+
+
+lpm_compare5	b2v_inst19(
+	.dataa(SYNTHESIZED_WIRE_59),
+	.agb(SYNTHESIZED_WIRE_7));
+
+
+lpm_dff0	b2v_inst2(
+	.clock(clk),
+	.data(SYNTHESIZED_WIRE_13),
+	.q(SYNTHESIZED_WIRE_0));
+
+
+lpm_compare6	b2v_inst20(
+	.dataa(SYNTHESIZED_WIRE_59),
+	.aleb(SYNTHESIZED_WIRE_6));
+
+
+lpm_compare7	b2v_inst21(
+	.dataa(SYNTHESIZED_WIRE_59),
+	.agb(SYNTHESIZED_WIRE_18));
+
+
+lpm_compare8	b2v_inst22(
+	.dataa(SYNTHESIZED_WIRE_59),
+	.aleb(SYNTHESIZED_WIRE_17));
+
+assign	SYNTHESIZED_WIRE_61 = SYNTHESIZED_WIRE_17 & SYNTHESIZED_WIRE_18;
+
+assign	se[0] = SYNTHESIZED_WIRE_60 | SYNTHESIZED_WIRE_61 | SYNTHESIZED_WIRE_62;
+
+
+lpm_dff0	b2v_inst25(
+	.clock(clk),
+	.data(SYNTHESIZED_WIRE_22),
+	.q(q[7:0]));
+
+assign	se[1] = SYNTHESIZED_WIRE_60 | SYNTHESIZED_WIRE_63;
+
+assign	se[2] = SYNTHESIZED_WIRE_61 | SYNTHESIZED_WIRE_64;
+
+
+lpm_mux0	b2v_inst28(
+	
+	.data1x(SYNTHESIZED_WIRE_27),
+	.data2x(SYNTHESIZED_WIRE_28),
+	.data3x(SYNTHESIZED_WIRE_29),
+	.data4x(SYNTHESIZED_WIRE_30),
+	.data5x(SYNTHESIZED_WIRE_31),
+	.sel(se),
+	.result(SYNTHESIZED_WIRE_34));
+
+
+lpm_rom0	b2v_inst29(
+	.clock(clk),
+	.rden(SYNTHESIZED_WIRE_62),
+	.address(SYNTHESIZED_WIRE_62),
+	.q(SYNTHESIZED_WIRE_27));
+
+
+lpm_dff0	b2v_inst3(
+	.clock(clk),
+	.data(SYNTHESIZED_WIRE_34),
+	.q(SYNTHESIZED_WIRE_1));
+
+
+lpm_rom1	b2v_inst30(
+	.clock(clk),
+	.rden(SYNTHESIZED_WIRE_63),
+	.address(SYNTHESIZED_WIRE_63),
+	.q(SYNTHESIZED_WIRE_28));
+
+
+lpm_rom2	b2v_inst31(
+	.clock(clk),
+	.rden(SYNTHESIZED_WIRE_60),
+	.address(SYNTHESIZED_WIRE_60),
+	.q(SYNTHESIZED_WIRE_29));
+
+
+lpm_rom3	b2v_inst32(
+	.clock(clk),
+	.rden(SYNTHESIZED_WIRE_64),
+	.address(SYNTHESIZED_WIRE_64),
+	.q(SYNTHESIZED_WIRE_30));
+
+
+lpm_rom4	b2v_inst33(
+	.clock(clk),
+	.rden(SYNTHESIZED_WIRE_61),
+	.address(SYNTHESIZED_WIRE_61),
+	.q(SYNTHESIZED_WIRE_31));
+
+
+lpm_dff0	b2v_inst35(
+	.clock(clk),
+	.data(SYNTHESIZED_WIRE_43),
+	.q(SYNTHESIZED_WIRE_59));
+
+
+lpm_dff0	b2v_inst36(
+	.clock(clk),
+	.data(SYNTHESIZED_WIRE_44),
+	.q(SYNTHESIZED_WIRE_48));
+
+
+lpm_add_sub0	b2v_inst37(
+	.dataa(q),
+	.datab(SYNTHESIZED_WIRE_45),
+	.result(SYNTHESIZED_WIRE_52));
+
+
+lpm_dff0	b2v_inst38(
+	.clock(clk),
+	.data(A),
+	.q(SYNTHESIZED_WIRE_46));
+
+
+lpm_dff0	b2v_inst39(
+	.clock(clk),
+	.data(SYNTHESIZED_WIRE_46),
+	.q(SYNTHESIZED_WIRE_54));
+
+
+lpm_dff0	b2v_inst40(
+	.clock(clk),
+	.data(SYNTHESIZED_WIRE_59),
+	.q(SYNTHESIZED_WIRE_13));
+
+
+lpm_dff0	b2v_inst41(
+	.clock(clk),
+	.data(SYNTHESIZED_WIRE_48),
+	.q(SYNTHESIZED_WIRE_58));
+
+
+lpm_dff0	b2v_inst42(
+	.clock(clk),
+	.data(SYNTHESIZED_WIRE_49),
+	.q(SYNTHESIZED_WIRE_57));
+
+
+lpm_ff1	b2v_inst50(
+	.clock(clk),
+	.data(p),
+	.q(q[25:8]));
+
+
+lpm_ff2	b2v_inst51(
+	.clock(clk),
+	.data(SYNTHESIZED_WIRE_50),
+	.q(SYNTHESIZED_WIRE_56));
+
+
+lpm_ff3	b2v_inst52(
+	.clock(clk),
+	.data(SYNTHESIZED_WIRE_51),
+	.q(SYNTHESIZED_WIRE_45));
+
+
+lpm_ff3	b2v_inst53(
+	.clock(clk),
+	.data(SYNTHESIZED_WIRE_52),
+	.q(outp));
+
+
+lpm_compare9	b2v_inst54(
+	.dataa(SYNTHESIZED_WIRE_59),
+	.alb(SYNTHESIZED_WIRE_62));
+
+
+lpm_dff0	b2v_inst6(
+	.clock(clk),
+	.data(SYNTHESIZED_WIRE_54),
+	.q(SYNTHESIZED_WIRE_55));
+
+
+lpm_dff0	b2v_inst7(
+	.clock(clk),
+	.data(SYNTHESIZED_WIRE_55),
+	.q(SYNTHESIZED_WIRE_22));
+
+
+lpm_mult1	b2v_inst8(
+	.dataa(SYNTHESIZED_WIRE_56),
+	.datab(SYNTHESIZED_WIRE_57),
+	.result(SYNTHESIZED_WIRE_51));
+
+
+lpm_dff0	b2v_inst9(
+	.clock(clk),
+	.data(SYNTHESIZED_WIRE_58),
+	.q(SYNTHESIZED_WIRE_49));
+
+
+endmodule
