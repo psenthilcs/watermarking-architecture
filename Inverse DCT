@@ -1,0 +1,960 @@
+
+
+module insertopar(
+	clk,
+	cle,
+	inp0,
+	inp1,
+	inp2,
+	inp3,
+	inp4,
+	inp5,
+	inp6,
+	inp7,
+	outp6
+);
+
+
+input	clk;
+input	cle;
+input	[7:0] inp0;
+input	[7:0] inp1;
+input	[7:0] inp2;
+input	[7:0] inp3;
+input	[7:0] inp4;
+input	[7:0] inp5;
+input	[7:0] inp6;
+input	[7:0] inp7;
+output	[7:0] outp6;
+
+wire	[7:0] SYNTHESIZED_WIRE_0;
+wire	[7:0] SYNTHESIZED_WIRE_1;
+wire	[7:0] SYNTHESIZED_WIRE_150;
+wire	[7:0] SYNTHESIZED_WIRE_151;
+wire	[7:0] SYNTHESIZED_WIRE_152;
+wire	[7:0] SYNTHESIZED_WIRE_5;
+wire	[7:0] SYNTHESIZED_WIRE_6;
+wire	[7:0] SYNTHESIZED_WIRE_7;
+wire	[7:0] SYNTHESIZED_WIRE_8;
+wire	[7:0] SYNTHESIZED_WIRE_153;
+wire	[7:0] SYNTHESIZED_WIRE_11;
+wire	[7:0] SYNTHESIZED_WIRE_12;
+wire	[7:0] SYNTHESIZED_WIRE_13;
+wire	[7:0] SYNTHESIZED_WIRE_154;
+wire	[7:0] SYNTHESIZED_WIRE_155;
+wire	[7:0] SYNTHESIZED_WIRE_156;
+wire	[7:0] SYNTHESIZED_WIRE_17;
+wire	[7:0] SYNTHESIZED_WIRE_18;
+wire	[7:0] SYNTHESIZED_WIRE_157;
+wire	[7:0] SYNTHESIZED_WIRE_21;
+wire	[7:0] SYNTHESIZED_WIRE_22;
+wire	[7:0] SYNTHESIZED_WIRE_23;
+wire	[7:0] SYNTHESIZED_WIRE_158;
+wire	[7:0] SYNTHESIZED_WIRE_25;
+wire	[7:0] SYNTHESIZED_WIRE_159;
+wire	[7:0] SYNTHESIZED_WIRE_160;
+wire	[7:0] SYNTHESIZED_WIRE_28;
+wire	[7:0] SYNTHESIZED_WIRE_30;
+wire	[7:0] SYNTHESIZED_WIRE_31;
+wire	[7:0] SYNTHESIZED_WIRE_161;
+wire	[7:0] SYNTHESIZED_WIRE_162;
+wire	[7:0] SYNTHESIZED_WIRE_163;
+wire	[7:0] SYNTHESIZED_WIRE_36;
+wire	[7:0] SYNTHESIZED_WIRE_37;
+wire	[7:0] SYNTHESIZED_WIRE_41;
+wire	[7:0] SYNTHESIZED_WIRE_42;
+wire	[7:0] SYNTHESIZED_WIRE_43;
+wire	[7:0] SYNTHESIZED_WIRE_44;
+wire	[7:0] SYNTHESIZED_WIRE_45;
+wire	[7:0] SYNTHESIZED_WIRE_46;
+wire	[7:0] SYNTHESIZED_WIRE_47;
+wire	[7:0] SYNTHESIZED_WIRE_48;
+wire	[7:0] SYNTHESIZED_WIRE_49;
+wire	[7:0] SYNTHESIZED_WIRE_164;
+wire	[7:0] SYNTHESIZED_WIRE_165;
+wire	[7:0] SYNTHESIZED_WIRE_56;
+wire	[7:0] SYNTHESIZED_WIRE_57;
+wire	[7:0] SYNTHESIZED_WIRE_58;
+wire	[7:0] SYNTHESIZED_WIRE_59;
+wire	[7:0] SYNTHESIZED_WIRE_60;
+wire	[7:0] SYNTHESIZED_WIRE_61;
+wire	[7:0] SYNTHESIZED_WIRE_62;
+wire	[7:0] SYNTHESIZED_WIRE_63;
+wire	[7:0] SYNTHESIZED_WIRE_64;
+wire	[7:0] SYNTHESIZED_WIRE_65;
+wire	[7:0] SYNTHESIZED_WIRE_66;
+wire	[7:0] SYNTHESIZED_WIRE_67;
+wire	[7:0] SYNTHESIZED_WIRE_68;
+wire	[7:0] SYNTHESIZED_WIRE_69;
+wire	[7:0] SYNTHESIZED_WIRE_70;
+wire	[7:0] SYNTHESIZED_WIRE_71;
+wire	[7:0] SYNTHESIZED_WIRE_72;
+wire	[7:0] SYNTHESIZED_WIRE_166;
+wire	[7:0] SYNTHESIZED_WIRE_74;
+wire	[7:0] SYNTHESIZED_WIRE_75;
+wire	[7:0] SYNTHESIZED_WIRE_77;
+wire	[7:0] SYNTHESIZED_WIRE_78;
+wire	[7:0] SYNTHESIZED_WIRE_79;
+wire	[7:0] SYNTHESIZED_WIRE_80;
+wire	[7:0] SYNTHESIZED_WIRE_81;
+wire	[7:0] SYNTHESIZED_WIRE_83;
+wire	[7:0] SYNTHESIZED_WIRE_84;
+wire	[7:0] SYNTHESIZED_WIRE_85;
+wire	[7:0] SYNTHESIZED_WIRE_86;
+wire	[7:0] SYNTHESIZED_WIRE_87;
+wire	[7:0] SYNTHESIZED_WIRE_88;
+wire	[7:0] SYNTHESIZED_WIRE_89;
+wire	[7:0] SYNTHESIZED_WIRE_90;
+wire	[7:0] SYNTHESIZED_WIRE_91;
+wire	[7:0] SYNTHESIZED_WIRE_92;
+wire	[7:0] SYNTHESIZED_WIRE_93;
+wire	[7:0] SYNTHESIZED_WIRE_94;
+wire	[7:0] SYNTHESIZED_WIRE_95;
+wire	[7:0] SYNTHESIZED_WIRE_96;
+wire	[7:0] SYNTHESIZED_WIRE_97;
+wire	[7:0] SYNTHESIZED_WIRE_98;
+wire	[7:0] SYNTHESIZED_WIRE_99;
+wire	[7:0] SYNTHESIZED_WIRE_100;
+wire	[7:0] SYNTHESIZED_WIRE_101;
+wire	[7:0] SYNTHESIZED_WIRE_102;
+wire	[7:0] SYNTHESIZED_WIRE_103;
+wire	[7:0] SYNTHESIZED_WIRE_104;
+wire	[7:0] SYNTHESIZED_WIRE_105;
+wire	[7:0] SYNTHESIZED_WIRE_106;
+wire	[7:0] SYNTHESIZED_WIRE_107;
+wire	[7:0] SYNTHESIZED_WIRE_108;
+wire	[7:0] SYNTHESIZED_WIRE_109;
+wire	[7:0] SYNTHESIZED_WIRE_110;
+wire	[7:0] SYNTHESIZED_WIRE_167;
+wire	[7:0] SYNTHESIZED_WIRE_168;
+wire	[7:0] SYNTHESIZED_WIRE_169;
+wire	[7:0] SYNTHESIZED_WIRE_170;
+wire	[7:0] SYNTHESIZED_WIRE_171;
+wire	[7:0] SYNTHESIZED_WIRE_172;
+wire	[7:0] SYNTHESIZED_WIRE_173;
+wire	[7:0] SYNTHESIZED_WIRE_174;
+wire	[7:0] SYNTHESIZED_WIRE_125;
+wire	[7:0] SYNTHESIZED_WIRE_126;
+wire	[7:0] SYNTHESIZED_WIRE_129;
+wire	[7:0] SYNTHESIZED_WIRE_130;
+wire	[7:0] SYNTHESIZED_WIRE_131;
+wire	[7:0] SYNTHESIZED_WIRE_132;
+wire	[7:0] SYNTHESIZED_WIRE_133;
+wire	[7:0] SYNTHESIZED_WIRE_134;
+wire	[7:0] SYNTHESIZED_WIRE_135;
+wire	[7:0] SYNTHESIZED_WIRE_137;
+wire	[7:0] SYNTHESIZED_WIRE_175;
+wire	[7:0] SYNTHESIZED_WIRE_143;
+wire	[7:0] SYNTHESIZED_WIRE_176;
+wire	[7:0] SYNTHESIZED_WIRE_146;
+wire	[7:0] SYNTHESIZED_WIRE_147;
+wire	[7:0] SYNTHESIZED_WIRE_149;
+
+
+
+
+
+lpm_dff4	b2v_inst(
+	.clock(clk),
+	.data(SYNTHESIZED_WIRE_0),
+	.q(SYNTHESIZED_WIRE_68));
+
+
+lpm_dff4	b2v_inst1(
+	.clock(clk),
+	.data(SYNTHESIZED_WIRE_1),
+	.q(SYNTHESIZED_WIRE_66));
+
+
+lpm_add_sub4	b2v_inst10(
+	.dataa(SYNTHESIZED_WIRE_150),
+	.datab(SYNTHESIZED_WIRE_151),
+	.result(SYNTHESIZED_WIRE_48));
+
+
+shifon	b2v_inst100(
+	.A(SYNTHESIZED_WIRE_152),
+	.Y(SYNTHESIZED_WIRE_5));
+
+
+lpm_add_sub5	b2v_inst101(
+	.dataa(SYNTHESIZED_WIRE_5),
+	.datab(SYNTHESIZED_WIRE_6),
+	.result(SYNTHESIZED_WIRE_31));
+
+
+lpm_dff6	b2v_inst102(
+	.clock(clk),
+	.aclr(cle),
+	.data(inp3),
+	.q(SYNTHESIZED_WIRE_153));
+
+
+lpm_add_sub5	b2v_inst103(
+	.dataa(SYNTHESIZED_WIRE_7),
+	.datab(SYNTHESIZED_WIRE_8),
+	.result(SYNTHESIZED_WIRE_11));
+
+
+lpm_dff6	b2v_inst104(
+	.clock(clk),
+	.aclr(cle),
+	.data(inp5),
+	.q(SYNTHESIZED_WIRE_7));
+
+
+shifon	b2v_inst105(
+	.A(SYNTHESIZED_WIRE_153),
+	.Y(SYNTHESIZED_WIRE_8));
+
+
+lpm_dff6	b2v_inst106(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_153),
+	.q(SYNTHESIZED_WIRE_152));
+
+
+lpm_dff6	b2v_inst107(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_11),
+	.q(SYNTHESIZED_WIRE_6));
+
+
+lpm_add_sub5	b2v_inst108(
+	.dataa(SYNTHESIZED_WIRE_12),
+	.datab(SYNTHESIZED_WIRE_13),
+	.result(SYNTHESIZED_WIRE_137));
+
+
+shif	b2v_inst109(
+	.A(SYNTHESIZED_WIRE_154),
+	.Y(SYNTHESIZED_WIRE_13));
+
+
+lpm_add_sub4	b2v_inst11(
+	.dataa(SYNTHESIZED_WIRE_155),
+	.datab(SYNTHESIZED_WIRE_156),
+	.result(SYNTHESIZED_WIRE_47));
+
+
+lpm_dff6	b2v_inst110(
+	.clock(clk),
+	.aclr(cle),
+	.data(inp6),
+	.q(SYNTHESIZED_WIRE_157));
+
+
+lpm_add_sub5	b2v_inst111(
+	.dataa(SYNTHESIZED_WIRE_17),
+	.datab(SYNTHESIZED_WIRE_18),
+	.result(SYNTHESIZED_WIRE_21));
+
+
+shif	b2v_inst112(
+	.A(SYNTHESIZED_WIRE_157),
+	.Y(SYNTHESIZED_WIRE_17));
+
+
+lpm_dff6	b2v_inst113(
+	.clock(clk),
+	.aclr(cle),
+	.data(inp2),
+	.q(SYNTHESIZED_WIRE_18));
+
+
+lpm_dff6	b2v_inst114(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_157),
+	.q(SYNTHESIZED_WIRE_12));
+
+
+lpm_dff6	b2v_inst115(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_21),
+	.q(SYNTHESIZED_WIRE_154));
+
+
+lpm_add_sub4	b2v_inst116(
+	.dataa(SYNTHESIZED_WIRE_22),
+	.datab(SYNTHESIZED_WIRE_23),
+	.result(SYNTHESIZED_WIRE_135));
+
+
+lpm_dff6	b2v_inst117(
+	.clock(clk),
+	.aclr(cle),
+	.data(inp1),
+	.q(SYNTHESIZED_WIRE_158));
+
+
+lpm_dff6	b2v_inst118(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_158),
+	.q(SYNTHESIZED_WIRE_22));
+
+
+shifon	b2v_inst119(
+	.A(SYNTHESIZED_WIRE_25),
+	.Y(SYNTHESIZED_WIRE_28));
+
+
+lpm_add_sub4	b2v_inst12(
+	.dataa(SYNTHESIZED_WIRE_159),
+	.datab(SYNTHESIZED_WIRE_160),
+	.result(SYNTHESIZED_WIRE_46));
+
+
+lpm_dff6	b2v_inst120(
+	.clock(clk),
+	.aclr(cle),
+	.data(inp7),
+	.q(SYNTHESIZED_WIRE_25));
+
+
+lpm_add_sub5	b2v_inst121(
+	.dataa(SYNTHESIZED_WIRE_28),
+	.datab(SYNTHESIZED_WIRE_158),
+	.result(SYNTHESIZED_WIRE_30));
+
+
+lpm_dff6	b2v_inst122(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_30),
+	.q(SYNTHESIZED_WIRE_166));
+
+
+lpm_dff6	b2v_inst123(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_31),
+	.q(SYNTHESIZED_WIRE_174));
+
+
+shif	b2v_inst124(
+	.A(SYNTHESIZED_WIRE_161),
+	.Y(SYNTHESIZED_WIRE_79));
+
+
+shifon	b2v_inst125(
+	.A(SYNTHESIZED_WIRE_162),
+	.Y(SYNTHESIZED_WIRE_71));
+
+
+shifon	b2v_inst126(
+	.A(SYNTHESIZED_WIRE_163),
+	.Y(SYNTHESIZED_WIRE_83));
+
+
+shifon	b2v_inst127(
+	.A(SYNTHESIZED_WIRE_161),
+	.Y(SYNTHESIZED_WIRE_77));
+
+
+lpm_dff6	b2v_inst128(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_36),
+	.q(SYNTHESIZED_WIRE_160));
+
+
+lpm_dff6	b2v_inst129(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_37),
+	.q(SYNTHESIZED_WIRE_156));
+
+
+lpm_add_sub5	b2v_inst13(
+	.dataa(SYNTHESIZED_WIRE_159),
+	.datab(SYNTHESIZED_WIRE_160),
+	.result(SYNTHESIZED_WIRE_45));
+
+
+lpm_dff6	b2v_inst130(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_163),
+	.q(SYNTHESIZED_WIRE_151));
+
+
+lpm_dff6	b2v_inst131(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_41),
+	.q(SYNTHESIZED_WIRE_165));
+
+
+lpm_dff6	b2v_inst132(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_42),
+	.q(SYNTHESIZED_WIRE_0));
+
+
+lpm_dff6	b2v_inst133(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_43),
+	.q(SYNTHESIZED_WIRE_67));
+
+
+lpm_dff6	b2v_inst134(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_44),
+	.q(SYNTHESIZED_WIRE_65));
+
+
+lpm_dff6	b2v_inst135(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_45),
+	.q(SYNTHESIZED_WIRE_63));
+
+
+lpm_dff6	b2v_inst136(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_46),
+	.q(SYNTHESIZED_WIRE_60));
+
+
+lpm_dff6	b2v_inst137(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_47),
+	.q(SYNTHESIZED_WIRE_58));
+
+
+lpm_dff6	b2v_inst138(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_48),
+	.q(SYNTHESIZED_WIRE_56));
+
+
+lpm_dff6	b2v_inst139(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_49),
+	.q(SYNTHESIZED_WIRE_125));
+
+
+lpm_add_sub5	b2v_inst14(
+	.dataa(SYNTHESIZED_WIRE_155),
+	.datab(SYNTHESIZED_WIRE_156),
+	.result(SYNTHESIZED_WIRE_44));
+
+
+lpm_add_sub5	b2v_inst15(
+	.dataa(SYNTHESIZED_WIRE_150),
+	.datab(SYNTHESIZED_WIRE_151),
+	.result(SYNTHESIZED_WIRE_43));
+
+
+lpm_add_sub5	b2v_inst16(
+	.dataa(SYNTHESIZED_WIRE_164),
+	.datab(SYNTHESIZED_WIRE_165),
+	.result(SYNTHESIZED_WIRE_42));
+
+
+mux8	b2v_inst17(
+	.selec(cle),
+	.A(SYNTHESIZED_WIRE_56),
+	.B(SYNTHESIZED_WIRE_57),
+	.S(SYNTHESIZED_WIRE_96));
+
+
+mux8	b2v_inst18(
+	.selec(cle),
+	.A(SYNTHESIZED_WIRE_58),
+	.B(SYNTHESIZED_WIRE_59),
+	.S(SYNTHESIZED_WIRE_85));
+
+
+mux8	b2v_inst19(
+	.selec(cle),
+	.A(SYNTHESIZED_WIRE_60),
+	.B(SYNTHESIZED_WIRE_61),
+	.S(SYNTHESIZED_WIRE_75));
+
+
+lpm_dff4	b2v_inst2(
+	.clock(clk),
+	.data(SYNTHESIZED_WIRE_62),
+	.q(SYNTHESIZED_WIRE_64));
+
+
+mux8	b2v_inst20(
+	.selec(cle),
+	.A(SYNTHESIZED_WIRE_63),
+	.B(SYNTHESIZED_WIRE_64),
+	.S(SYNTHESIZED_WIRE_69));
+
+
+mux8	b2v_inst21(
+	.selec(cle),
+	.A(SYNTHESIZED_WIRE_65),
+	.B(SYNTHESIZED_WIRE_66),
+	.S(SYNTHESIZED_WIRE_62));
+
+
+mux8	b2v_inst22(
+	.selec(cle),
+	.A(SYNTHESIZED_WIRE_67),
+	.B(SYNTHESIZED_WIRE_68),
+	.S(SYNTHESIZED_WIRE_1));
+
+
+lpm_dff4	b2v_inst3(
+	.clock(clk),
+	.data(SYNTHESIZED_WIRE_69),
+	.q(SYNTHESIZED_WIRE_61));
+
+
+lpm_add_sub5	b2v_inst36(
+	.dataa(SYNTHESIZED_WIRE_70),
+	.datab(SYNTHESIZED_WIRE_71),
+	.result(SYNTHESIZED_WIRE_72));
+
+
+lpm_dff6	b2v_inst37(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_72),
+	.q(SYNTHESIZED_WIRE_161));
+
+
+shif1	b2v_inst38(
+	.A(SYNTHESIZED_WIRE_166),
+	.Y(SYNTHESIZED_WIRE_23));
+
+
+lpm_dff6	b2v_inst39(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_74),
+	.q(SYNTHESIZED_WIRE_84));
+
+
+lpm_dff4	b2v_inst4(
+	.clock(clk),
+	.data(SYNTHESIZED_WIRE_75),
+	.q(SYNTHESIZED_WIRE_59));
+
+
+lpm_add_sub4	b2v_inst41(
+	.dataa(SYNTHESIZED_WIRE_162),
+	.datab(SYNTHESIZED_WIRE_77),
+	.result(SYNTHESIZED_WIRE_78));
+
+
+lpm_dff6	b2v_inst42(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_78),
+	.q(SYNTHESIZED_WIRE_80));
+
+
+lpm_add_sub4	b2v_inst44(
+	.dataa(SYNTHESIZED_WIRE_79),
+	.datab(SYNTHESIZED_WIRE_80),
+	.result(SYNTHESIZED_WIRE_81));
+
+
+lpm_dff6	b2v_inst45(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_81),
+	.q(SYNTHESIZED_WIRE_163));
+
+
+lpm_add_sub5	b2v_inst47(
+	.dataa(SYNTHESIZED_WIRE_161),
+	.datab(SYNTHESIZED_WIRE_83),
+	.result(SYNTHESIZED_WIRE_37));
+
+
+lpm_dff6	b2v_inst49(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_84),
+	.q(SYNTHESIZED_WIRE_86));
+
+
+lpm_dff4	b2v_inst5(
+	.clock(clk),
+	.data(SYNTHESIZED_WIRE_85),
+	.q(SYNTHESIZED_WIRE_57));
+
+
+lpm_dff6	b2v_inst50(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_86),
+	.q(SYNTHESIZED_WIRE_41));
+
+
+lpm_dff6	b2v_inst51(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_87),
+	.q(SYNTHESIZED_WIRE_129));
+
+
+lpm_dff6	b2v_inst52(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_88),
+	.q(SYNTHESIZED_WIRE_108));
+
+
+lpm_dff6	b2v_inst53(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_89),
+	.q(SYNTHESIZED_WIRE_104));
+
+
+lpm_dff6	b2v_inst54(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_90),
+	.q(SYNTHESIZED_WIRE_101));
+
+
+lpm_dff6	b2v_inst55(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_91),
+	.q(SYNTHESIZED_WIRE_98));
+
+
+lpm_dff6	b2v_inst56(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_92),
+	.q(SYNTHESIZED_WIRE_70));
+
+
+lpm_dff6	b2v_inst57(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_93),
+	.q(SYNTHESIZED_WIRE_162));
+
+
+lpm_dff6	b2v_inst58(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_94),
+	.q(SYNTHESIZED_WIRE_74));
+
+
+lpm_dff6	b2v_inst59(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_95),
+	.q(SYNTHESIZED_WIRE_36));
+
+
+lpm_dff4	b2v_inst6(
+	.clock(clk),
+	.data(SYNTHESIZED_WIRE_96),
+	.q(SYNTHESIZED_WIRE_126));
+
+
+lpm_dff6	b2v_inst60(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_97),
+	.q(SYNTHESIZED_WIRE_95));
+
+
+lpm_dff6	b2v_inst61(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_98),
+	.q(SYNTHESIZED_WIRE_97));
+
+
+lpm_dff6	b2v_inst62(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_99),
+	.q(SYNTHESIZED_WIRE_133));
+
+
+lpm_dff6	b2v_inst63(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_100),
+	.q(SYNTHESIZED_WIRE_99));
+
+
+lpm_dff6	b2v_inst64(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_101),
+	.q(SYNTHESIZED_WIRE_100));
+
+
+lpm_dff6	b2v_inst65(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_102),
+	.q(SYNTHESIZED_WIRE_132));
+
+
+lpm_dff6	b2v_inst66(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_103),
+	.q(SYNTHESIZED_WIRE_102));
+
+
+lpm_dff6	b2v_inst67(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_104),
+	.q(SYNTHESIZED_WIRE_103));
+
+
+lpm_dff6	b2v_inst68(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_105),
+	.q(SYNTHESIZED_WIRE_131));
+
+
+lpm_dff6	b2v_inst69(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_106),
+	.q(SYNTHESIZED_WIRE_105));
+
+
+lpm_dff4	b2v_inst7(
+	.clock(clk),
+	.data(SYNTHESIZED_WIRE_107),
+	.q(outp6));
+
+
+lpm_dff6	b2v_inst70(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_108),
+	.q(SYNTHESIZED_WIRE_106));
+
+
+lpm_dff6	b2v_inst71(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_109),
+	.q(SYNTHESIZED_WIRE_130));
+
+
+lpm_dff6	b2v_inst72(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_110),
+	.q(SYNTHESIZED_WIRE_109));
+
+
+lpm_add_sub4	b2v_inst73(
+	.dataa(SYNTHESIZED_WIRE_167),
+	.datab(SYNTHESIZED_WIRE_168),
+	.result(SYNTHESIZED_WIRE_87));
+
+
+lpm_add_sub4	b2v_inst74(
+	.dataa(SYNTHESIZED_WIRE_169),
+	.datab(SYNTHESIZED_WIRE_170),
+	.result(SYNTHESIZED_WIRE_88));
+
+
+lpm_add_sub4	b2v_inst75(
+	.dataa(SYNTHESIZED_WIRE_171),
+	.datab(SYNTHESIZED_WIRE_172),
+	.result(SYNTHESIZED_WIRE_89));
+
+
+lpm_add_sub4	b2v_inst76(
+	.dataa(SYNTHESIZED_WIRE_173),
+	.datab(SYNTHESIZED_WIRE_174),
+	.result(SYNTHESIZED_WIRE_90));
+
+
+lpm_add_sub5	b2v_inst77(
+	.dataa(SYNTHESIZED_WIRE_173),
+	.datab(SYNTHESIZED_WIRE_174),
+	.result(SYNTHESIZED_WIRE_91));
+
+
+lpm_add_sub5	b2v_inst78(
+	.dataa(SYNTHESIZED_WIRE_171),
+	.datab(SYNTHESIZED_WIRE_172),
+	.result(SYNTHESIZED_WIRE_92));
+
+
+lpm_add_sub5	b2v_inst79(
+	.dataa(SYNTHESIZED_WIRE_169),
+	.datab(SYNTHESIZED_WIRE_170),
+	.result(SYNTHESIZED_WIRE_93));
+
+
+mux8	b2v_inst8(
+	.selec(cle),
+	.A(SYNTHESIZED_WIRE_125),
+	.B(SYNTHESIZED_WIRE_126),
+	.S(SYNTHESIZED_WIRE_107));
+
+
+lpm_add_sub5	b2v_inst80(
+	.dataa(SYNTHESIZED_WIRE_167),
+	.datab(SYNTHESIZED_WIRE_168),
+	.result(SYNTHESIZED_WIRE_94));
+
+
+lpm_dff6	b2v_inst81(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_129),
+	.q(SYNTHESIZED_WIRE_110));
+
+
+lpm_dff6	b2v_inst82(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_130),
+	.q(SYNTHESIZED_WIRE_164));
+
+
+lpm_dff6	b2v_inst83(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_131),
+	.q(SYNTHESIZED_WIRE_150));
+
+
+lpm_dff6	b2v_inst84(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_132),
+	.q(SYNTHESIZED_WIRE_155));
+
+
+lpm_dff6	b2v_inst85(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_133),
+	.q(SYNTHESIZED_WIRE_159));
+
+
+lpm_dff6	b2v_inst86(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_134),
+	.q(SYNTHESIZED_WIRE_167));
+
+
+lpm_dff6	b2v_inst87(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_135),
+	.q(SYNTHESIZED_WIRE_171));
+
+
+lpm_dff6	b2v_inst88(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_154),
+	.q(SYNTHESIZED_WIRE_168));
+
+
+lpm_dff6	b2v_inst89(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_137),
+	.q(SYNTHESIZED_WIRE_170));
+
+
+lpm_add_sub4	b2v_inst9(
+	.dataa(SYNTHESIZED_WIRE_164),
+	.datab(SYNTHESIZED_WIRE_165),
+	.result(SYNTHESIZED_WIRE_49));
+
+
+lpm_dff6	b2v_inst90(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_175),
+	.q(SYNTHESIZED_WIRE_169));
+
+
+lpm_dff6	b2v_inst91(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_166),
+	.q(SYNTHESIZED_WIRE_172));
+
+
+lpm_dff6	b2v_inst92(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_152),
+	.q(SYNTHESIZED_WIRE_173));
+
+
+lpm_add_sub4	b2v_inst93(
+	.dataa(SYNTHESIZED_WIRE_143),
+	.datab(SYNTHESIZED_WIRE_175),
+	.result(SYNTHESIZED_WIRE_134));
+
+
+lpm_dff6	b2v_inst94(
+	.clock(clk),
+	.aclr(cle),
+	.data(inp0),
+	.q(SYNTHESIZED_WIRE_176));
+
+
+shifon	b2v_inst95(
+	.A(SYNTHESIZED_WIRE_176),
+	.Y(SYNTHESIZED_WIRE_146));
+
+
+lpm_add_sub5	b2v_inst96(
+	.dataa(SYNTHESIZED_WIRE_146),
+	.datab(SYNTHESIZED_WIRE_147),
+	.result(SYNTHESIZED_WIRE_149));
+
+
+lpm_dff6	b2v_inst97(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_176),
+	.q(SYNTHESIZED_WIRE_143));
+
+
+lpm_dff6	b2v_inst98(
+	.clock(clk),
+	.aclr(cle),
+	.data(inp4),
+	.q(SYNTHESIZED_WIRE_147));
+
+
+lpm_dff6	b2v_inst99(
+	.clock(clk),
+	.aclr(cle),
+	.data(SYNTHESIZED_WIRE_149),
+	.q(SYNTHESIZED_WIRE_175));
+
+
+endmodule
